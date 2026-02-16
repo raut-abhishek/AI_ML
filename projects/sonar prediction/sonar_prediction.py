@@ -44,3 +44,26 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size= 0.1, strati
 
 
 
+# model training using logistic regression
+model = LogisticRegression()
+
+# training regression model with training data
+model.fit(x_train, y_train)
+
+
+
+
+# mpdel evaluation
+
+
+# accuracy on training data
+x_train_prediction = model.predict(x_train)
+training_data_accuracy = accuracy_score(x_train_prediction, y_train)
+print('Accuracy on training data : ', training_data_accuracy)
+
+
+
+# accuracy on test data
+x_test_prediction = model.predict(x_test)
+test_data_accuracy = accuracy_score(x_test_prediction, y_test)
+print('Accuracy on test data : ', test_data_accuracy)
