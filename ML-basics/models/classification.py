@@ -23,3 +23,12 @@ model = LogisticRegression(max_iter=200)
 
 # Train model
 model.fit(X_train, y_train)
+
+
+# Predict
+predictions = model.predict(X_test)
+
+# Accuracy
+accuracy = accuracy_score(y_test, predictions)
+
+print("Model Accuracy:", accuracy)
